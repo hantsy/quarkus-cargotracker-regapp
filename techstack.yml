@@ -1,0 +1,20 @@
+repo_name: hantsy/quarkus-cargotracker-regapp
+report_id: 64aa40ba3624bf279cff5dd89b34e071
+version: 0.1
+repo_type: Public
+timestamp: '2024-02-28T08:34:31+00:00'
+requested_by: hantsy
+provider: github
+branch: master
+detected_tools_count: 1
+tools:
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/hantsy/quarkus-cargotracker-regapp
+  detection_source: Repo Metadata
