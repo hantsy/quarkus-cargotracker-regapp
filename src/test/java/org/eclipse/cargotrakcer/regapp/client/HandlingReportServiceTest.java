@@ -1,9 +1,8 @@
 package org.eclipse.cargotrakcer.regapp.client;
 
 import com.github.tomakehurst.wiremock.WireMockServer;
+import io.quarkus.test.junit.QuarkusTest;
 import jakarta.inject.Inject;
-import org.jboss.weld.junit5.auto.AddPackages;
-import org.jboss.weld.junit5.auto.EnableAutoWeld;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -12,9 +11,7 @@ import static com.github.tomakehurst.wiremock.client.WireMock.*;
 import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.options;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-//@ExtendWith(WeldJunit5AutoExtension.class)
-@EnableAutoWeld
-@AddPackages({HandlingReportService.class})
+@QuarkusTest
 class HandlingReportServiceTest {
 
     @Inject
@@ -61,7 +58,7 @@ class HandlingReportServiceTest {
         assertThat(handlingResponse).isInstanceOf(HandlingResponse.Failed.class);
 
         var failed = (HandlingResponse.Failed) handlingResponse;
-        assertThat(failed.getMessage()).isEqualTo("failed");
+        assertThat(failed.message()).isEqualTo("failed");
 
         verify(
                 postRequestedFor(urlEqualTo(url))

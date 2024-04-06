@@ -23,12 +23,12 @@ import java.util.function.Consumer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-@Dependent// this is a must, set to ApplicationScoped does not work.
+@Dependent
 public class HandlingReportController {
     private final static Logger LOGGER = Logger.getLogger(HandlingReportController.class.getName());
 
     @Inject
-    private HandlingReportService handlingReportService;
+    HandlingReportService handlingReportService;
 
     @FXML
     private DateTimePicker completionTimeField;
