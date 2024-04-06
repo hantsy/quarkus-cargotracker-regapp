@@ -99,21 +99,14 @@ public class HandlingReportController {
         }
 
         var report = HandlingReport.builder()
-                .completionTime(DateUtil.toString(completionTime))
+                .completionTime(DateUtil.format(completionTime))
                 .eventType(eventType)
                 .trackingId(trackingId)
                 .unLocode(unLocode)
                 .voyageNumber(voyageNumber)
                 .build();
         LOGGER.log(Level.INFO, "submitting report: {0}", report);
-        // TODO validate report data.
-        //
-        // CDI injection does not work.
-        // see issue: https://github.com/hantsy/cargotracker-regapp/issues/2
-        //
-        // HandlingReportService handlingReportService = CDI.current().select(HandlingReportService.class).get();
-        //
-        // declares Controller as @Dependent resolved this issue.
+
         this.handlingReportService.submitReport(report)
                 .thenAccept(handlingResponse -> {
 
