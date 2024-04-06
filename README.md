@@ -1,12 +1,10 @@
-# CargoTracker RegApp
+# Quarkus CargoTracker RegApp
 
-[The original DDD book sample regapp](https://github.com/citerus/dddsample-regapp) was written in Swing and Spring. 
+This Cargotacker regapp is rewritten in Quarkus and [Quarkus Fx extension](https://github.com/quarkiverse/quarkus-fx). 
 
-This app is used for submitting handling events to the [cargotracker core system](https://github.com/hantsy/cargotracker) (forked from [eclipse-ee4j/cargotracker](https://github.com/eclipse-ee4j//cargotracker)).
+* [The original DDD book sample regapp](https://github.com/citerus/dddsample-regapp) was written in Swing and Spring.
+* I have created a variant of [CargoTracker Regapp](https://github.com/hantsy/cargotracker-regapp) to submit handling events to the [cargotracker core system](https://github.com/hantsy/cargotracker) (forked from [eclipse-ee4j/cargotracker](https://github.com/eclipse-ee4j//cargotracker)).
 
-* Rebuilding the whole UI with JavaFX 
-* Using CDI(JBoss Weld) as IOC container
-* The communication between client and server is switched to Jakarta Restful Service(JAX-RS)
 
 <img src="./preview.png" alt="preview" style="width:600px;hight:480px;box-shadow: 0 4px 8px 0 rgba(0, 0,  0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);text-align:center;" />
 
@@ -24,7 +22,7 @@ Clone the source codes from Github, open a terminal and switch to the root folde
 Execute the following command to build and run the application.
 
 ```bash
-mvn clean compile exec:java
+mvn clean package quarkus:run
 ```
 
 When testing the functionality on your local machine, you have to run cargotracker firstly, check [CargoTracker Getting Started Guide](https://github.com/eclipse-ee4j/cargotracker/#getting-started). 
@@ -32,7 +30,7 @@ When testing the functionality on your local machine, you have to run cargotrack
 If you are trying to run it against a running cargotracker deployed to AWS, etc, please setup an environment variable [HANDLING_REPORT_SERVICE_URL](https://github.com/hantsy/cargotracker-regapp/blob/master/src/main/java/org/eclipse/cargotrakcer/regapp/client/internal/HttpClientHandlingReportService.java#L47C55-L47C82) to locate the full path of the handling events RESTful API.
 
 ## References
-
+* [Quakrus FX Extension announcement](https://twitter.com/maxandersen/status/1751725403553546275)
 * [JavaFX and CDI: How to Inject many Stages](https://stackoverflow.com/questions/47591527/javafx-and-cdi-how-to-inject-many-stages)
 * [Bootstrap Javafx 2.0 with Weld](https://stackoverflow.com/questions/14654627/bootstrap-javafx-2-0-with-weld)
 * [JavaFX FXML controller - constructor vs initialize method](https://stackoverflow.com/questions/34785417/javafx-fxml-controller-constructor-vs-initialize-method)
