@@ -10,7 +10,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import org.eclipse.cargotrakcer.regapp.ui.HandlingReportController;
 
 import java.io.InputStream;
 import java.util.logging.Level;
