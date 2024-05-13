@@ -33,7 +33,7 @@
         <assertj-core.version>3.25.3</assertj-core.version>
         <wiremock.version>3.5.4</wiremock.version>
         <junit.version>5.10.2</junit.version>
-        <mockito.version>5.11.0</mockito.version>
+        <mockito.version>5.12.0</mockito.version>
     </properties>
 
     <dependencyManagement>
