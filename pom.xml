@@ -87,7 +87,7 @@
         <dependency>
             <groupId>io.quarkiverse.fx</groupId>
             <artifactId>quarkus-fx</artifactId>
-            <version>0.4.1</version>
+            <version>0.4.2</version>
         </dependency>
 
         <dependency>
