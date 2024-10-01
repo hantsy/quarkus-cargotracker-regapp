@@ -1,6 +1,6 @@
 package org.eclipse.cargotrakcer.regapp;
 
-import io.quarkiverse.fx.FxStartupEvent;
+import io.quarkiverse.fx.FxPostStartupEvent;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.event.Observes;
 import jakarta.inject.Inject;
@@ -19,11 +19,10 @@ import java.util.logging.Logger;
 public class Main {
     private final static Logger LOGGER = Logger.getLogger(Main.class.getName());
 
-
     @Inject
     FXMLLoader fxmlLoader;
 
-    public void start(@Observes FxStartupEvent event) throws Exception {
+    public void start(@Observes FxPostStartupEvent event) throws Exception {
         LOGGER.log(Level.INFO, "Observes FxStartupEvent: {}", new Object[]{event});
         // start primary stage.
         Stage stage = event.getPrimaryStage();
