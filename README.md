@@ -1,4 +1,4 @@
-# Quarkus CargoTracker RegApp
+# CargoTracker RegApp (Quarkus)
 
 This Cargotacker regapp ported [CargoTracker Regapp(CDI/Weld + JavaFX)](https://github.com/hantsy/cargotracker-regapp) to Quarkus using [Quarkus FX extension](https://github.com/quarkiverse/quarkus-fx). 
 
