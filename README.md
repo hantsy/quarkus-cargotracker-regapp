@@ -1,9 +1,8 @@
 # Quarkus CargoTracker RegApp
 
-This Cargotacker regapp is rewritten in Quarkus and JavaFX via [Quarkus FX extension](https://github.com/quarkiverse/quarkus-fx). 
+This Cargotacker regapp ported [CargoTracker Regapp(CDI/Weld + JavaFX)](https://github.com/hantsy/cargotracker-regapp) to Quarkus using [Quarkus FX extension](https://github.com/quarkiverse/quarkus-fx). 
 
-[The original Cargotracker regapp](https://github.com/citerus/dddsample-regapp) from Eric's DDD book sample was written in Swing and Spring.
-This repository refactored the existing [CargoTracker Regapp(CDI/Weld + JavaFX)](https://github.com/hantsy/cargotracker-regapp) to submit handling events to the [Cargotracker core system](https://github.com/hantsy/cargotracker) (a fork from [eclipse-ee4j/cargotracker](https://github.com/eclipse-ee4j//cargotracker)).
+[The original Cargotracker regapp](https://github.com/citerus/dddsample-regapp) from Eric's DDD book sample was written in Swing and Spring is used to submit handling events to the [Cargotracker backend system](https://github.com/hantsy/cargotracker) (a fork from [eclipse-ee4j/cargotracker](https://github.com/eclipse-ee4j//cargotracker)) via a public RESTful API.
 
 
 <img src="./preview.png" alt="preview" style="width:600px;hight:480px;box-shadow: 0 4px 8px 0 rgba(0, 0,  0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);text-align:center;" />
