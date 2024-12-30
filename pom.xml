@@ -23,7 +23,7 @@
         <javafx-maven-plugin.version>0.0.8</javafx-maven-plugin.version>
 
         <!-- dependencies -->
-        <quarkus.version>3.15.1</quarkus.version>
+        <quarkus.version>3.17.5</quarkus.version>
         <javafx.version>22.0.2</javafx.version>
         <tornadofx-controls.version>1.0.6</tornadofx-controls.version>
         <jakarta.json.bind-api.version>3.0.1</jakarta.json.bind-api.version>
